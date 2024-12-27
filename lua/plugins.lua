@@ -178,7 +178,7 @@ return {
     opts = {},
     dependencies = {
       "MunifTanjim/nui.nvim",
-    }
+    },
     config = function()
       require('noice_c')
     end,
