@@ -167,7 +167,7 @@ return {
     cmd = "NvimTreeOpen",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("config.tree")
+      require("tree")
     end,
   },
 
@@ -179,6 +179,9 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
     }
+    config = function()
+      require('noice_c')
+    end,
   },
   { "nvim-lua/plenary.nvim", lazy = true },
   { "nvim-tree/nvim-web-devicons", lazy = true },
