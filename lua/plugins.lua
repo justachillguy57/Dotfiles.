@@ -6,7 +6,7 @@ return {
   {
     'williamboman/mason.nvim',
     config = function()
-     	require 'config.mason'
+     	require 'mason_c'
     end 
   },
 
@@ -27,7 +27,7 @@ return {
       lspconfig.pyright.setup {}
 
       -- Lua language server setup with full configuration
-      require 'config.lspconfig'
+      require 'lspconfig_c'
 
 
       -- Key mappings for LSP functions
@@ -224,7 +224,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = { "BufRead", "BufNewFile" },
     config = function()
-      require 'config.statusbar'
+      require 'statusbar'
     end,
   }
 }
