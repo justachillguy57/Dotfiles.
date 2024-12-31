@@ -1,0 +1,197 @@
+@import "mocha.css";
+
+* {
+    font-size: 16px;
+    font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: rgba(26,27,38,0);
+    border-bottom: 1px solid rgba(26,27,38,0);
+    border-radius: 0px;
+    color: #C6A0F6;  /* base0F (Pink) */
+}
+
+#workspaces {
+    color: #1E1E2E;  /* base00 */
+    background: transparent;
+    margin: 4px;
+    border-radius: 0px;
+    border: 0px;
+    font-style: normal;
+}
+
+#workspaces button {
+    color: #343446;  /* base03 */
+    background: #1E1E2E;  /* base00 */
+    margin: 4px 3px;
+    opacity: 1;
+    border: 0px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #1E1E2E;  /* base00 */
+    background: linear-gradient(45deg, #B4AEE8, #C6A0F6, #74C7EC, #F8BD96);  /* base0E, base0F, base0D, base09 */
+    background-size: 300% 300%;
+    animation: swiping 15s linear infinite;
+    border-radius: 15px;
+    margin: 4px 3px;
+    opacity: 1.0;
+    border: 0px;
+    min-width: 45px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#workspaces button:hover {
+    color: #D9E0EE;  /* base05 */
+    border: 0px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+@keyframes gradient_horizontal {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes swiping {
+    0% {
+        background-position: 0% 200%;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+tooltip {
+    background: #1E1E2E;  /* base00 */
+    border: 1px solid #B4AEE8;  /* base0E */
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #F5E0DC;  /* base07 */
+}
+
+#window {
+    color: #343446;  /* base03 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    border-radius: 15px;
+    padding: 0px 10px;
+}
+
+#memory {
+    color: #C6A0F6;  /* base0F */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#clock {
+    color: #A6E3A1;  /* base0B */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#cpu {
+    color: #F5E0DC;  /* base07 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#disk {
+    color: #343446;  /* base03 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#battery {
+    color: #F28FAD;  /* base08 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#network {
+    color: #F8BD96;  /* base09 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#tray {
+    color: #D9E0EE;  /* base05 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#pulseaudio {
+    color: #74C7EC;  /* base0D */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#custom-notification {
+    color: #89DCEB;  /* base0C */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+
+#custom-themeselector {
+    color: #74C7EC;  /* base0D */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px 6px 0px;
+    padding: 0px 10px 0px 5px;
+    border-radius: 0px 15px 15px 0px;
+}
+
+#custom-startmenu {
+    color: #343446;  /* base03 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 4px;
+    padding: 0px 8px 0px 10px;
+    border-radius: 15px;
+}
+
+#idle_inhibitor {
+    color: #F8BD96;  /* base09 */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 0px;
+    padding: 0px 14px;
+    border-radius: 0px;
+}
+
+#custom-exit {
+    color: #B4AEE8;  /* base0E */
+    background: #1E1E2E;  /* base00 */
+    margin: 6px 0px 6px 4px;
+    padding: 0px 5px 0px 10px;
+    border-radius: 15px 0px 0px 15px;
+}
+
